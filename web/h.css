@@ -1,0 +1,101 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27 Jan, 2020, 10:06:13 AM
+    Author     : NIKHIL
+*/
+
+a, a:focus, a:hover, a:visited {
+    text-decoration: none;
+}
+.ab{
+    font-family:sans-serif;
+}
+.ab .head{
+    box-shadow: 0 15px 40px -20px rgba(40,44,63,.15);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: #fff;
+    z-index: 1000;
+    transform: translateZ(0);
+    transition: transform .3s ease;
+    padding: 0 20px;
+}
+.sp{
+    font-weight: 700;
+    color: #3d4152;
+    text-transform: uppercase;
+}
+.ab .head .nav{
+    position:absolute;
+    top:30px;
+    left:150px;
+    font-weight:600;
+    font-size: 14px;
+}
+.b{
+    padding: 0 20px;
+    background: #37718e;
+    min-height: 330vh;
+}
+.c{
+    padding-top: 33px;
+    max-width: 1200px;
+    min-width: 1200px;
+    margin: 0 auto;
+   
+}
+.d{
+    color: #fff;
+    margin-bottom: 37px;
+    margin-top: 37px;
+    position: relative;
+    top:100px;
+}
+.help{
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.let{
+    margin-top: 2px;
+    font-size: 16px;
+}
+.e{
+    background: #fff;
+    box-shadow: 0 2px 15px 0 rgba(0,0,0,.15);
+    width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    top:110px;
+}
+.full-footer{
+      background-color:#2d3436;
+      color:#dfe6e9;
+  }
+  
+   .full-footer1{
+      background-color:#dcdde1;
+      
+  }
+   
+   .s2 {
+      color:white;
+  }
+ .top-footer p{
+    
+      color:white;
+  }
+  .top-footer a{
+    
+      color:white;
+      font-weight:600;
+  }
+*{box-sizing: border-box}
+

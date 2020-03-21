@@ -1,0 +1,284 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2 Feb, 2020, 5:47:17 PM
+    Author     : NIKHIL
+*/
+
+@charset "utf-8";
+
+
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%}
+body {
+    margin: 0;
+}
+article, aside, footer, header, nav, section {
+    display: block;
+}
+h1 {
+    font-size: 2em;
+    margin: .67em 0;
+}
+h2{font-size:1.4em}
+
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-family: ProximaNova, Arial, Helvetica Neue, sans-serif !important;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: -.5px;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+body, html {
+	font-family: ProximaNova, Arial, Helvetica Neue, sans-serif !important;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-weight: 300;
+    color: #282c3f;
+}
+body{padding-top: 80px; }
+
+.fonts-loaded {
+    font-family: ProximaNova, Arial, Helvetica Neue, sans-serif;
+    letter-spacing: 0;
+}
+
+ol, ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a, a:focus, a:hover, a:visited {
+    text-decoration: none;
+}
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+a{color:#000;}
+a:hover{color:#fc8019;}
+
+.light-gray{color:#282c3f}
+p{ font-size: 16px; padding: 0; margin-bottom: 15px;}
+h1{font-weight: 700; color:#282c3f}
+h4{font-size: 18px; font-weight: 300; color:#282c3f}
+h3, h2, h5{ color:#282c3f}
+.no-padding{padding:0px;}
+.white-color{color: #ffffff;}
+
+
+.large-a{font-size:16px; font-weight:500;}
+.bold{font-weight:600}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    background-color: transparent;}
+.navbar-default a{font-weight: 500;}
+.navbar-default {
+    background-color: #fff;;
+    border-color: transparent;
+	padding-bottom: 5px;
+}
+/*Home ends*/
+.hero-common{background:url(/careers/images/hero-common.jpg) #fc8019 no-repeat center top; background-size:cover; position:relative;}
+.hero-common h1{padding: 80px 0;font-size: 50px; color: #fff;font-weight: 400;text-shadow: 1px 1px #000000;}
+
+	    .cv-block{
+		width: 270px;
+        height: 308px;
+        background-color:#f7f7f7;
+        position: relative;
+        overflow:hidden;
+		float: left;
+        margin:1%;
+
+    }
+    .cv-block p {
+        position: absolute;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+		color: #000;
+		border:1px solid #fc8019;
+        font-size:14px;
+        overflow:hidden;
+    }
+    .cv-block img{
+        height: 100%;
+        position: absolute;
+        transition: ease-in-out .5s;
+        -webkit-transition: ease-in-out .5s;
+        -moz-transition: ease-in-out .5s;
+    }
+    .cv-block:hover img{
+transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+        opacity: 0;
+    }
+    .margin-bottom-30{margin-bottom:30px;}
+    .job-titles{color:#808080;font-size:16px; font-weight:normal}
+
+@media (max-width: 680px) {
+    .hero-image{max-width:100% !important; margin-bottom:20px;}
+.hero-wrapper {height:auto !important;}
+.cv-block{ width: 50%;height: 330px;}
+.cta-block{background:rgba(40, 44, 63, 0.9); padding:15px; display:inline-block;position: static; bottom: 20px;
+z-index: 2; width: auto; margin: 15px; text-align:center;}
+   .cv-block p {
+        position: absolute;
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+		color: #000;
+		border:2px solid #fc8019;
+    }
+
+
+.no-padding-mobile{padding-left:0px !important; padding-right:0px !important; }
+.core-values{padding:30px 0;}
+	    .cv-block{
+		width: 280px;
+        height: 308px;
+        background-color:#f7f7f7;
+        position: relative;
+        overflow:hidden;
+		float: none;
+        margin:5%;
+
+    }
+
+
+.carousel {
+    z-index: -1 !important;
+}
+    .hero {right: 0%;left: 50% !important;}
+    .hero-banner-dow{height:200px;}
+    h3{margin-top:20px !important;}
+    .hero-carousel{background:url(/careers/images/hero-banner-1.jpg) no-repeat -200px top; }
+.hero-carousel-2{background:url(/careers/images/hero-banner-2.jpg) no-repeat -200px top; }
+.pull-right{
+    float:none !important;
+  }
+	.copyright{text-align:right !important;  }
+	.socials:first-child {
+    margin-left: 0px !important;}
+	.socials {margin-top: 20px !important;
+    display: inline-block !important;}
+	.btn-apply:after{display: none;}
+	.overflow{overflow-x:scroll !important;}
+
+}
+.modal-body {padding: 30px;}
+
+@media (min-width: 681px) and (max-width: 768px){
+.copyright{text-align:right !important;}
+.socials:first-child {margin-left: 0px !important;}
+.socials {margin-top: 20px !important;display: inline-block !important;}
+.hero-wrapper {height:auto !important;}
+.cv-block{ width: 50%;height: 330px;}
+.cta-block{background:rgba(40, 44, 63, 0.9); padding:15px; display:block;position: static; bottom: 20px;
+z-index: 2; width: auto; margin:0 15px 15px 15px; text-align:center}
+   .cv-block p {
+        position: absolute;
+        text-align: left;
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+		color: #000;
+		border:2px solid #fc8019;
+    }
+
+
+.certifications{padding:20px 0; border-top:none;}
+
+.certifications-arrow {border-bottom: solid 1px #999999; border-right: none; padding-bottom:20px; text-align:center; display:block; }
+.certifications-arrow:last-child{border-bottom: none;}
+.dt-rw-mrgn{margin-bottom:0 !important;}
+.no-padding-mobile{padding-left:0px !important; padding-right:0px !important; }
+	.overflow{overflow-x:scroll !important;}
+}
+
+
+.our-culture{background-color: #fff; padding:0; margin: 50px 0; border-bottom:solid 1px #ccc; position:relative}
+/*.swiggy-boy{position:absolute; bottom:0px; right:0px; }*/
+.our-culture h3{font-size: 20px; font-weight: 500;}
+.our-culture h3:after{    margin-top: 5px;
+    width: 30%;
+    content: " ";
+    height: 3px;
+    background-color: #333;
+    display: block;}
+
+.why-us{padding:0;}
+.why-us ul{ padding: 0; margin: 0}
+.why-us ul li{ padding-left: 15px; margin-bottom: 10px; margin-left:10px;}
+.why-us ul li:before{
+	font-family: 'icomoon';
+    content: '\E93D';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    color: #fc8019;
+    line-height: 1.3;
+	padding-left:15px;
+}
+
+.navbar-brand{height:60px;}
+
+.hero-image{float:right; max-width:700px;}
+.t{
+position:absolute;
+font-weight:bold;
+left:695px;
+top:-9px;
+font-size:30px;
+}
+.tt{
+position:absolute;
+width:400px;
+left:700px;
+top:65px;
+font-size:16px;
+}
+            .full-footer{
+      background-color:#2d3436;
+      color:#dfe6e9;
+  }
+  
+   .full-footer1{
+      background-color:#dcdde1;
+      
+  }
+   
+   .s2 {
+      color:white;
+  }
+ .top-footer p{
+    
+      color:white;
+  }
+  .top-footer a{
+    
+      color:white;
+      font-weight:600;
+  }
+*{box-sizing: border-box}
