@@ -9,7 +9,7 @@
 <html>
     <head>
              <link rel="stylesheet" href="online.css">
-        <link ref="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
         <link rel="stylesheet" href="bootstrap.css">
         <script src="jquery.js"></script>
@@ -78,18 +78,19 @@
                         <a href="privacy.html" target="_blank">Privacy Policy</a><br>
                         <a href="cookie.html" target="_blank">Cookies Policy</a><br>
                     </div>
-                    <div class="col-md-3 s2">
-                        <h4>Follow On</h><br>
-                            <a href=""><img class width="24" height="24" alt src="fb.png"></a>
-                            <a href=""><img class width="24" height="24" alt src="insta.png"></a>
-                            <a href=""><img class width="24" height="24" alt src="twitter.png"></a>
-                            <a href=""><i class="fab fa-2x fa-youtube-square"></i></a>
+                     <div class="col-md-3 s2">
+                         <h4>Follow On</h4>
+                            <a href=""><i style="padding-right:  12px;"class="fa fa-facebook-square"></i></a>
+                            <a href=""><i  style="padding-right :12px;"class=" fa fa-twitter-square"></i></a>
+                            <a href=""><i  style="padding-right :12px;"class=" fa fa-instagram"></i></a>
+                            <a href=""><i  style="padding-right:12px;"class="fa fa-youtube-square"></i></a>
+                             
                     </div>
                 </div>
             </div>
         </div>
         <div style="background-color:#dfe6e9;color:#2d3436;"class="footer-copyright text-center py-3"><b> Delivering at your doorstep&nbsp&nbsp&nbsp&nbsp© 2020 Copyright:</b>
-            <a href="">SsoftTech.com</a>
+            <a href="">Manitian</a>
         </div>
     </body>
 </html>

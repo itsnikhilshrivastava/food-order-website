@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>signup</title>
          <link rel="stylesheet" href="online.css">
-        <link ref="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
         <link rel="stylesheet" href="bootstrap.css">
         <script src="jquery.js"></script>
@@ -68,7 +68,7 @@
 
       
          
-         <footer class="full-footer">
+   <footer class="full-footer">
             <div class="container top-footer">
                 <div class="row s2">
                     <div class="col-md-3 s2">
@@ -80,47 +80,34 @@
 
                     </div>
                     <div class="col-md-3 s2">
-                        
                         <h4>Contact</h4>
                         <a href="help.html" target="_blank">Help & Support</a><br>
                         <a href="">Read FAQs</a><br>
-                        <h4>Follow On</h><br>
-                            <a href=""><img class width="24" height="24" alt src="fb.png"></a>
-                            <a href=""><img class width="24" height="24" alt src="insta.png"></a>
-                            <a href=""><img class width="24" height="24" alt src="twitter.png"></a>
-                            <a href=""><i class="fab fa-2x fa-youtube-square"></i></a>
+                        
                     </div>
                     <div class="col-md-3 s2">
                         <h4>Legal</b></h4>
                         <a href="T and C.html" target="_blank">Terms & Conditions</a><br>
                         <a href="C and R.html" target="_blank">Refund & cancellation</a><br>
+                        <!-- <a href="">Help & Support</a><br>-->
                         <a href="privacy.html" target="_blank">Privacy Policy</a><br>
                         <a href="cookie.html" target="_blank">Cookies Policy</a><br>
                     </div>
                     <div class="col-md-3 s2">
-                        <h4>For Restaurants</h4>
-                        <a href="">Add Restaurants</a><br>
-                        <a href="">Bussiness Blog</a><br>
-
+                         <h4>Follow On</h4>
+                            <a href=""><i style="padding-right:  12px;"class="fa fa-facebook-square"></i></a>
+                            <a href=""><i  style="padding-right :12px;"class=" fa fa-twitter-square"></i></a>
+                            <a href=""><i  style="padding-right :12px;"class=" fa fa-instagram"></i></a>
+                            <a href=""><i  style="padding-right:12px;"class="fa fa-youtube-square"></i></a>
+                             
                     </div>
                 </div>
             </div>
         </div>
-         </footer>
-      <div class="container"style="color:#2d3436;width: 100%;">
-                <div class="row">
-                     <div class="col-md-5"><b>Delivering at your doorstep</b>
-                         </div>
-        <div class="col-md-6"class="footer-copyright text-center py-3"><b> ©2020 Copyright:</b>
-            <a href="">SsoftTech.com</a>
-            </div>
-                     <div class="col-md-1">
-                <a href="#" class="o-scroll-up static" title="back to top">
-  <span class="o-scroll-up-text">^</span>
-  <span class="o-scroll-up-icon" aria-hidden="true"></span>
-</a>
-                     </div>
-            </div>
+        <div style="background-color:#dfe6e9;color:#2d3436;"class="footer-copyright text-center py-3"><img src=""></img><b> Delivering at your doorstep&nbsp&nbsp&nbsp&nbsp© 2020 Copyright:</b>
+            <a href="">Manitian</a>
         </div>
+        
+
     </body>
 </html>

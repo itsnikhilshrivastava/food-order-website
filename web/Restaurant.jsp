@@ -24,6 +24,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Hunger Saver</title>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="online.css">
         <link rel="stylesheet" href="bootstrap.css">
         <style>
@@ -39,18 +40,96 @@
     z-index: 1000;
     transform: translateZ(0);
     transition: transform .3s ease;
+    
+}
+.h{
     padding: 0 20px;
 }
-            
+.dropdown {
+  float: right;
+  top: 0;
+  
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #3d4152;
+  padding: 0 40px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.head .nav{
+    position:absolute;
+    top:20px;
+    left:270px;
+    font-weight:600;
+    font-size: 14px;
+}
         </style>
 
     </head>
     <body>
       <div class="_3arMG">
+        <%         MyConnection y=new MyConnection();
+        Connection c1=y.getConnection();
+    
+        PreparedStatement pst1=c1.prepareStatement("select * from customer where email=?");
+        pst1.setString(1, email);
+     
+        ResultSet rs1=pst1.executeQuery();
+        if(rs1.next()){
+        %>
               
               <header class="head">
-             <a style="color: #7f8c8d;padding-left:6%;font-size: 200%;"class="navbar-brand" href="">HungerSaver</a>
+                    <div class="h">
+                        <a style="color: #7f8c8d;padding-left:6%;font-size: 200%;"class="navbar-brand" href="index.jsp">HungerSaver</a>
+                    </div>
+                  <div class="nav">
+                    <div class="dropdown">
+                        <button class="dropbtn"><h5><b><%=rs1.getString("name")%></b></h5>
+                            
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="signout.jsp">LogOut</a>
+                        </div>
+                    </div>
+                  </div>
         </header>
+                            <%}%>
       <table  align="center" style="width:1200px;margin-top:100px;">
           
              <tr>
@@ -114,25 +193,25 @@
                     </div>
                     <div class="col-md-3 s2 s3">
                         <h4>Contact</h4>
-                        <a href="">Help & Support</a><br>
+                        <a href="help.html">Help & Support</a><br>
                         <a href="">Read FAQs</a><br>
                         
                     </div>
                     <div class="col-md-3 s2">
                         <h4>Legal</b></h4>
-                        <a href="">Terms & Conditions</a><br>
-                        <a href="">Refund & cancellation</a><br>
+                        <a href="T and C.html">Terms & Conditions</a><br>
+                        <a href="C and R.html">Refund & cancellation</a><br>
                         <!-- <a href="">Help & Support</a><br>-->
-                        <a href="">Privacy Policy</a><br>
-                        <a href="">Cookies Policy</a><br>
+                        <a href="privacy.html">Privacy Policy</a><br>
+                        <a href="cookie.html">Cookies Policy</a><br>
                     </div>
                     <div class="col-md-3 s2">
-                     <h4>Follow On</h><br>
-                            <a href=""><i class="fa fa-facebook-square"></i></a>
-                            <a href=""><i class="fa fa-twitter-square"></i></a>
-                            <a href=""><i class="fa fa-instagram"></i></a>
-                            <a href=""><i class="fa fa-youtube-square"></i></a>
-
+                         <h4>Follow On</h4>
+                            <a href=""><i style="padding-right:  12px;"class="fa fa-facebook-square"></i></a>
+                            <a href=""><i  style="padding-right :12px;"class=" fa fa-twitter-square"></i></a>
+                            <a href=""><i  style="padding-right :12px;"class=" fa fa-instagram"></i></a>
+                            <a href=""><i  style="padding-right:12px;"class="fa fa-youtube-square"></i></a>
+                             
                     </div>
                 </div>
             </div>

@@ -8,12 +8,33 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+       <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="newcss.css">
     </head>
     <body>
-        <h1>Thank You!</h1>
-        <h2>For Registration Please check Your</h2>
-        <h2>Email for Account Verification Link</h2>
+        <div class="container">
+  <div class="printer-top"></div>
+    
+  <div class="paper-container">
+    <div class="printer-bottom"></div>
+
+    <div class="paper">
+      <div class="main-contents">
+        <div class="success-icon">&#10004;</div>
+        <div class="success-title">
+          Thank You!
+          For Registration
+        </div>
+        <div class="success-description">
+           Please check Your Email for Account Verification Link
+        </div>
+      </div>
+      <div class="jagged-edge"></div>
+    </div>
+  </div>
+</div>
     </body>
 </html>
+

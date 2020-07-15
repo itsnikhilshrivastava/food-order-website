@@ -50,17 +50,92 @@ a {
 .price:before{
   content: 'Rs.';
 }
+.h{
+    padding: 0 20px;
+}
+.dropdown {
+  float: right;
+  top: 0;
+  
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #3d4152;
+  padding: 4px 20px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
         </style>
     </head>
     <body>
    
-             
-               <header class="head">
-                <a style="color: #7f8c8d;padding-left:6%;padding-top: 0.5%;font-size: 300%" class="navbar-brand" href="index.jsp"><b>H</b></a>
-            <div class="nav">
-                <span class="sp">Cart</span>
-            </div>
-            </header>
+                     <%         MyConnection z=new MyConnection();
+        Connection c2=z.getConnection();
+    
+        PreparedStatement pst2=c2.prepareStatement("select * from customer where email=?");
+        pst2.setString(1, email);
+     
+        ResultSet rs2=pst2.executeQuery();
+        if(rs2.next()){
+        %>
+              
+              <header class="head">
+                    <div class="h">
+                        <a style="color: #7f8c8d;padding-left:6%;padding-top: 0.5%;font-size: 300%" class="navbar-brand" href="index.jsp"><b>H</b></a> 
+                    </div>
+                    <div class="nav">
+                        <span class="sp">Cart</span>
+                    <a style="color: #3d4152;padding-left:6%;padding-top: 0.5%;font-size: 20px;font-weight: 700;"class="navbar-brand" href="Restaurant.jsp">Restaurant</a>
+                       <div class="dropdown">
+                           <button class="dropbtn"><h5><b><%=rs2.getString("name")%></b></h5>
+                           
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="signout.jsp">LogOut</a>
+                        </div>
+                       </div>
+                    </div>
+            
+                      
+        </header>
+                            <%}%>
+                
+            
               <div class="_3arMG">
           
         <table border=1 align=center style="width:800px;border-radius:8px;">
@@ -71,6 +146,7 @@ a {
         {
         int qty=0;
         qty=Integer.parseInt(request.getParameter("qty"));
+        String oid="0";
         String fid=null;
         String rid=null;
         fid=request.getParameter("fid");
@@ -79,17 +155,18 @@ a {
           MyConnection x=new MyConnection();
         Connection c=x.getConnection();
     
-        PreparedStatement pst=c.prepareStatement("insert into orders(date,qty,fid,rid,email) values(sysdate(),?,?,?,?)");
+        PreparedStatement pst=c.prepareStatement("insert into orders(date,qty,fid,rid,email,oid) values(sysdate(),?,?,?,?,?)");
         pst.setInt(1, qty);
         pst.setString(2,fid);
         pst.setString(3,rid);
         pst.setString(4,email);
+        pst.setString(5,oid);
         int r=pst.executeUpdate();
         }
          float t=0;
              MyConnection y=new MyConnection();
         Connection c1=y.getConnection();
-            PreparedStatement pst1=c1.prepareStatement("select * from food,orders where food.fid=orders.fid"); 
+            PreparedStatement pst1=c1.prepareStatement("select * from food,orders where food.fid=orders.fid and oid='0'"); 
             //pst+1.setString(1,custid);
             ResultSet rs=pst1.executeQuery();
             while(rs.next())
@@ -113,7 +190,7 @@ a {
 <tr>
     <td colspan="5" style="font-weight:700">Total <%=t%></td>
     <td colspan="2"><a href="food.jsp?rid=<%=request.getParameter("rid")%>">Continue</a> 
-            <a href="">Checkout</a>
+            <a href="checkout.jsp?total=<%=t%>">Checkout</a>
         </td>
 </tr>
         </table>

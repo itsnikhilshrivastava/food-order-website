@@ -249,7 +249,63 @@ li.price:before{
     padding: 0 1rem;
   }
 }
+.h{
+    padding: 0 20px;
+}
+.dropdown {
+  float: right;
+  top: 0;
+  
+}
 
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #3d4152;
+  padding: 25px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.head .nav{
+    position:absolute;
+    top:20px;
+    left:270px;
+    font-weight:600;
+    font-size: 14px;
+}
         </style>
   	
 	<title>Hunger Saver</title>
@@ -258,9 +314,33 @@ li.price:before{
          
          
         <div class="_3arMG"> 
-            <header>
-             <a style="color: #7f8c8d;padding-left:6%;font-size: 200%;"class="navbar-brand" href="index.jsp">HungerSaver</a>
+                  <%         MyConnection z=new MyConnection();
+        Connection c2=z.getConnection();
+    
+        PreparedStatement pst2=c2.prepareStatement("select * from customer where email=?");
+        pst2.setString(1, email);
+     
+        ResultSet rs2=pst2.executeQuery();
+        if(rs2.next()){
+        %>
+              
+              <header class="head">
+                    <div class="h">
+                        <a style="color: #7f8c8d;padding-left:6%;padding-top: 0.5%;font-size: 300%;font-weight: 700;" class="navbar-brand" href="index.jsp"><b>H</b></a> 
+                        <a style="color: #3d4152;padding-left:1%;padding-top: 0.5%;font-size: 20px;font-weight: 700;"class="navbar-brand" href="Restaurant.jsp">Restaurant</a>
+                    </div>
+                  <div class="nav">
+                    <div class="dropdown">
+                        <button class="dropbtn"><h5><b><%=rs2.getString("name")%></b></h5>
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="signout.jsp">LogOut</a>
+                        </div>
+                    </div>
+                  </div>
         </header>
+                            <%}%>
         <%  
          String rid=request.getParameter("rid");
         MyConnection x=new MyConnection();
