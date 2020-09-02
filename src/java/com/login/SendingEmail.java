@@ -26,7 +26,7 @@ public class SendingEmail {
     
     public void sendMail(){
         String email = "shop.hungersaver@gmail.com";
-        String pword = "hungersaver@12";
+        String pword = "hungersaver@123";
         Properties properties = new Properties();
         
         properties.put("mail.smtp.host", "smtp.gmail.com");
@@ -49,7 +49,7 @@ public class SendingEmail {
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(userEmail));
             message.setSubject("HungeSaver.in Email verification link");
             message.setText("Verification Link....");
-            message.setText("Your Verification Link :: "+"http://localhost:8084/WebApplication4/ActivateAccount?key1="+userEmail+"&key2="+myHash);
+            message.setText("Your Verification Link :: "+"http://localhost:8084/ActivateAccount?key1="+userEmail+"&key2="+myHash);
             Transport.send(message);
         }catch(Exception ex){
             System.out.println("SendingEmail...."+ex);
