@@ -30,7 +30,7 @@ public class SendEmail {
     
     public void sendMail(){
         String email = "shop.hungersaver@gmail.com";
-        String pword = "hungersaver@123";
+        String pword = "";
         Properties properties = new Properties();
         
         properties.put("mail.smtp.host", "smtp.gmail.com");
